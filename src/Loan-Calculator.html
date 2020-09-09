@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Calculator</title>
+  <link rel="stylesheet" href="CSS.css">
+  <script src="Mechanism.js"></script>
+</head>
+<body style="background-color: #000">
+<div class="my-header">
+  <h1>Loan Calculator</h1>
+</div>
+
+<div class="loan">
+  Loan Amount: $<input id="amt" type="text" maxlength="09">
+  <br>
+  <br>
+  Interest Rate: %<input id="rate" type="text" maxlength="03">
+  <br>
+  <br>
+  Months to pay: <input id="pay" type="text" maxlength="03">
+  <br>
+  <br>
+  <button id="cal" type="submit" onclick="loanCalculator()">Monthly payment =
+  <input id="result" type="text" maxlength="09"></button>
+</div>
+
+</body>
+</html>

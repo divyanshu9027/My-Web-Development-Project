@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Number Guessing Game</title>
+  <style>
+
+    body{
+      background: linear-gradient(60deg, #ffac32, #e34abc) no-repeat;
+      height: 100vh;
+      text-align: center;
+
+    }
+
+    .game-body {
+      margin: 50px 0;
+    }
+    .game-body input{
+      border :0;
+      border-bottom: 2px solid #333;
+      background: transparent;
+      padding: 0.4em;
+    }
+    .game-body button{
+      padding: 1em;
+      border:0;
+      border-radius: 50px;
+      box-shadow: 2px 2px 1px 1px #333;
+      background: red;
+      color: #fff;
+    }
+    .game-body button:hover{
+      background: #ffacff;
+      transition: 0.4s ease-in-out;
+      cursor: pointer;
+    }
+    #again {
+      display: none;
+      text-align: center;
+    }
+
+
+  </style>
+</head>
+
+<body>
+<div class="game-body">
+  <h1>Welcome to Number Guessing Game</h1>
+  <p>All you have to do is to guess a number between 1 to 100. Computer has already guessed. You have only 10
+    chances. Go and get the number</p>
+  <input type="number" id="ip" placeholder="Test your guess">
+  <button id="btn">Lets Check</button>
+  <p id="output"></p>
+  <button id="again">Play Again</button>
+</div>
+<script>
+
+  var input = document.getElementById('ip')
+  var btn = document.getElementById('btn')
+  var output = document.getElementById('output')
+  var again = document.getElementById('again')
+
+  var totalGuess = 10
+  var maxLimit = 101
+  var randomNumber = Math.floor(Math.random() * maxLimit)
+
+  btn.addEventListener('click', function () {
+    var inputVal = input.value
+    if (inputVal === "") {
+      alert("Enter at least a number")
+      return false
+    }
+    if (inputVal < randomNumber) {
+      output.innerHTML = `Your number is <b>less</b> than computer thinks. <br /> You have <b>${--totalGuess}</b> guess's left`
+      input.value = ''
+    } else if (inputVal > randomNumber) {
+      output.innerHTML = `Your number is <b>greater</b> than computer thinks. <br /> You have <b>${--totalGuess}</b> guess's left`
+      input.value = ''
+    } else if (inputVal == randomNumber) {
+      output.innerHTML = `Hurrah You get it. <b><u>${randomNumber}</u></b> is the number`
+      btn.disabled = true
+      again.style.display = 'block'
+    }
+    if (totalGuess == 0) {
+      output.innerHTML = `Sorry you are out of move. ${randomNumber} is the number.`
+      btn.disabled = true
+      again.style.display = 'block'
+    }
+  })
+  again.addEventListener('click', function () {
+    window.location.reload()
+  })
+
+</script>
+</body>
+
+</html>

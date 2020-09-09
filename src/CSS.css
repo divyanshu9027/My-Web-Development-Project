@@ -1,0 +1,84 @@
+.login {
+  background-image: url(bg.jpg);
+}
+
+.first-header {
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: xx-large;
+}
+
+.message {
+  background-image: url(img-1.jpg);
+}
+
+.image {
+  margin: 0;
+  padding: 0;
+}
+
+.para {
+  font-size: x-large;
+  font-family: Serif;
+}
+
+.topnav {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.header-contact {
+  text-align: center;
+  font-size: xx-large;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+
+.contact-form {
+  background-image: url(img-3.jpg);
+}
+
+.cal {
+  background-color: yellow;
+}
+.cal1 {
+  text-align: center;
+  font-size: xx-large;
+  text-decoration: underline;
+  color: #000;
+}
+
+.my-header {
+  font-size: xx-large;
+  color: white ;
+  text-align: center;
+}
+
+.loan {
+  color: white;
+}
+
+.style {
+  background-color: black;
+}
+
+.header1 {
+  text-align: center;
+  color: white;
+
+}
+
+.fac {
+  color: white;
+  font-size: xx-large;
+
+}
+
+

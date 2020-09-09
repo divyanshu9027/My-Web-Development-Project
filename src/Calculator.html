@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="CSS.css">
+  <script src="Mechanism.js"></script>
+</head>
+<body class="cal">
+
+<div class="cal1">
+  <h1>Calculator</h1>
+</div>
+
+Enter the First Number: <label for="n1"></label><input id="n1" type="text" maxlength="9" value="0.0">
+<br>
+<br>
+
+Enter the Second Number: <label for="n2"></label><input id="n2" type="text" maxlength="9" value="0.0">
+<br>
+<br>
+
+<select id="operator">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="x">x</option>
+  <option value="/">/</option>
+  <option value="%">%</option>
+</select>
+
+<input type="button" value="=" onclick="calculator()">
+<br>
+<br>
+
+Answer:<input id="result" type="text">
+<br>
+<br>
+
+
+
+
+</body>
+</html>
